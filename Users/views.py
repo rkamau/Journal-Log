@@ -42,7 +42,7 @@ def register_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}")
+                messages.info(request, "Account Registered Succesfully")
                 return redirect('/')
             else:
                 print(form.errors)
