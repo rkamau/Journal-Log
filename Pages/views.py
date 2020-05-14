@@ -92,7 +92,7 @@ def editentryview(request, entry_id):
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/topic/")
+            return HttpResponseRedirect("/Log/topic/")
         #if topic.owner != request.user:
             #raise Http404
     context = {
