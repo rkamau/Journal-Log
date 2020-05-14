@@ -38,10 +38,10 @@
             <ul class="nav navbar-collpase collapse navbar-right">
               {% if user.is_authenticated %}
               <li><a>Hello, {{user.username}}</a></li>
-              <li><a href="{% url 'Users:logout' %}"></a></li>
+              <li><a href="{% url 'Users:logout' %}">Logout</a></li>
               {% else %}
-              <li><a href="{% url 'Users:register' %}"></a></li>
-              <li><a href "{% url 'Users:login' %}"></a></li>
+              <li><a href="{% url 'Users:register' %}">Register</a></li>
+              <li><a href "{% url 'Users:login' %}">Login</a></li>
               {% endif %}
             </ul>
 
