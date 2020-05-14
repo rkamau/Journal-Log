@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h2>Topic: {{Topic}}</h2>
+{% endblock %}
+
+{% block content %}
+<p>
+  <a href="{% url 'Log:add-entry' topic.id %}">Add New Entry</a>
+</p>
+
+  {% for entry in entries %}
+    <div class="card mb-3">
+          <h3 class = "card-header">
+              {{entry.date_added|date}}
+              <small>
+              <a href="{% url 'Log:edit-entry' entry.id %}">Edit Entry</a>
+          </small>
+        </h3>
+      <div class="card-body">
+        {{entry.text|linebreaks}}
+      </div>
+  {% empty %}
+    <h3>There are no entries for this topic yet</h3>
+{% endfor %}
+
+{% endblock %}

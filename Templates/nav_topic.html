@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{% block title %}Topic Select{% endblock %}
+
+{%block content %}
+<h2>Topics:  </h2>
+<ol>
+  {%for i in topics%}
+    <li><a href="/Log/newentry/{{i.id}}/">{{i}}</a></li>
+  {%endfor%}
+</ol>
+{%endblock%}

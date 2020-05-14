@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}New Topic{% endblock %}
+
+{% block content %}
+<h3><u>Add a new entry: </u></h3>
+<form method="POST">{% csrf_token %}
+{{form.as_p}}
+<input type="submit" name="New Topic" value="Log Topic">
+</form>
+{% endblock %}
