@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0u_b7as^+riucxif)%6q6uaif0je)09c@jime6$*tzvlt&#um&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["journallog.herokuapp.com"]
 
 
 # Application definition
@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #THIRD PARTY APPS
-    "bootstrap4",
+
 
     #OWN
     "learning_logs",
